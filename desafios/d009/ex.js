@@ -8,9 +8,15 @@ function paciente(nome,idade,historico,consultas){
  this.consultas = consultas;
  this.listaHisto = function(){
      this.historico += 1;
-     console.log('seu numeros de historicos é igual a ,' + this.historico);
+     console.log(`o passiente ${this.nome} de idade ${this.idade} tem esse valor de consultas ${this.historico}`);
+ };
+ this.valorDeconsultas = function(){
+    this.numeroConsultas = this.historico ;
+    console.log(`o valor que vc tem a pagar é  ${this.numeroConsultas*100}`);
  }
 }
 
 let novoPaciente = new paciente('douglas', 30, 5,  );
-novoPaciente.listaHisto()
+novoPaciente.listaHisto();
+
+novoPaciente.valorDeconsultas();
